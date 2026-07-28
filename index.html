@@ -1,10 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ojay's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojo Odoh | Data Engineer</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f8;
+            color:#222;
+        }
+
+        header{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        header h1{
+            font-size:3rem;
+        }
+
+        header p{
+            margin-top:10px;
+            font-size:1.2rem;
+            color:#cbd5e1;
+        }
+
+        nav{
+            background:white;
+            padding:15px;
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#0f172a;
+            font-weight:bold;
+        }
+
+        section{
+            width:90%;
+            max-width:1100px;
+            margin:60px auto;
+        }
+
+        h2{
+            margin-bottom:20px;
+            color:#0f172a;
+        }
+
+        .about{
+            line-height:1.7;
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,.08);
+        }
+
+        .card h3{
+            margin-bottom:10px;
+        }
+
+        .tech{
+            color:#2563eb;
+            font-size:.9rem;
+            margin:10px 0;
+        }
+
+        .button{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 18px;
+            background:#2563eb;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+        }
+
+        ul{
+            margin-left:20px;
+            line-height:2;
+        }
+
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:60px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>My Data Portfolio</h1>
-    <p>Data Engineer | Analytics Engineer</p>
+
+<header>
+
+<h1>Ojo Odoh</h1>
+
+<p>Data Engineer | Analytics Engineer | BI Developer</p>
+
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p class="about">
+I build modern data platforms using SQL, Python, Snowflake, Microsoft Fabric,
+Power BI and dbt. My focus is designing scalable ETL/ELT pipelines,
+dimensional models, cloud data warehouses and interactive dashboards that
+turn raw data into business insights.
+</p>
+
+</section>
+
+<section id="projects">
+
+<h2>Featured Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<h3>CryptoNex SaaS Analytics</h3>
+
+<p>
+End-to-end Snowflake analytics platform using medallion architecture,
+SQL transformations and a Streamlit dashboard.
+</p>
+
+<p class="tech">
+Snowflake • SQL • Python • Streamlit • GitHub
+</p>
+
+<a class="button" href="#">GitHub</a>
+
+</div>
+
+<div class="card">
+
+<h3>Healthcare Analytics Platform</h3>
+
+<p>
+Healthcare warehouse built using staging, intermediate and mart layers
+with dimensional modelling and automated transformations.
+</p>
+
+<p class="tech">
+Snowflake • dbt • SQL • Python
+</p>
+
+<a class="button" href="#">GitHub</a>
+
+</div>
+
+<div class="card">
+
+<h3>Airline Operations Dashboard</h3>
+
+<p>
+Operational reporting solution analysing delays, maintenance and cargo
+performance with Power BI.
+</p>
+
+<p class="tech">
+SQL • Power BI • Data Warehouse
+</p>
+
+<a class="button" href="#">GitHub</a>
+
+</div>
+
+<div class="card">
+
+<h3>Retail Sales Analytics</h3>
+
+<p>
+Retail data warehouse with customer, product and sales analytics using
+star schema modelling.
+</p>
+
+<p class="tech">
+SQL • Python • Power BI
+</p>
+
+<a class="button" href="#">GitHub</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<ul>
+<li>SQL</li>
+<li>Python</li>
+<li>Snowflake</li>
+<li>dbt</li>
+<li>Microsoft Fabric</li>
+<li>PySpark</li>
+<li>Power BI</li>
+<li>Git & GitHub</li>
+<li>Dimensional Modelling</li>
+<li>ETL / ELT Pipelines</li>
+</ul>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: your@email.com</p>
+
+<p>GitHub: https://github.com/lassjodoh</p>
+
+<p>LinkedIn: https://linkedin.com/in/your-profile</p>
+
+</section>
+
+<footer>
+
+© 2026 Ojo Odoh
+
+</footer>
+
 </body>
 </html>
