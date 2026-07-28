@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Ojo Odoh — Data Engineer
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   *{box-sizing:border-box;margin:0;padding:0}:root{--bg:#08111f;--bg2:#0d1728;--card:#111d30;--border:rgba(255,255,255,.09);--text:#f5f7fb;--muted:#9ba9bc;--accent:#5eead4;--blue:#60a5fa;--max:1120px}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:inherit}nav{position:sticky;top:0;z-index:10;background:rgba(8,17,31,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}.nav{max-width:var(--max);margin:auto;padding:0 24px;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-family:"Space Mono",monospace;color:var(--accent);text-decoration:none;font-weight:700}.logo span{color:var(--muted)}.links{display:flex;gap:24px}.links a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:700}.links a:hover{color:var(--accent)}.wrap{max-width:var(--max);margin:auto;padding:88px 24px}.hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.badge{display:inline-flex;padding:7px 12px;border:1px solid rgba(94,234,212,.25);border-radius:999px;color:var(--accent);font:11px "Space Mono",monospace;margin-bottom:24px}h1{font-size:clamp(52px,8vw,92px);line-height:.98;letter-spacing:-.05em;margin-bottom:24px}h1 span{display:block;color:var(--accent)}.lead{font-size:18px;color:var(--muted);max-width:650px;line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.primary{background:var(--accent);color:var(--bg)}.secondary{border:1px solid rgba(255,255,255,.18)}.panel{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;font:13px "Space Mono",monospace;line-height:1.95}.panel .k{color:var(--blue)}.panel .v{color:var(--accent)}.panel .m{color:var(--muted)}section{border-top:1px solid var(--border)}.eyebrow{font:12px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.09em;color:var(--accent);margin-bottom:14px}h2{font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.04em;margin-bottom:18px}.intro{color:var(--muted);font-size:17px;max-width:760px;line-height:1.8}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}.skill{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px}.skill h3{margin-bottom:14px;font-size:16px}.skill ul{list-style:none;color:var(--muted);display:grid;gap:8px;font-size:14px}.skill li:before{content:"•";color:var(--accent);margin-right:8px}.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}.case{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}.case-img{
+    height:240px;
+    overflow:hidden;
+    border-bottom:1px solid var(--border);
+    background:var(--bg2);
+}
+
+.case-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.case:hover .case-img img{
+    transform:scale(1.05);
+}.case-body{padding:26px}.case-meta{font:11px "Space Mono",monospace;color:var(--accent);text-transform:uppercase;margin-bottom:12px}.case h3{font-size:26px;line-height:1.15;margin-bottom:12px}.case p{color:var(--muted);font-size:14px;line-height:1.75}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.tag{border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font:10px "Space Mono",monospace}.read{color:var(--accent);font-weight:800;text-decoration:none}.contact{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:34px;margin-top:40px;display:flex;justify-content:space-between;gap:24px;align-items:center}footer{max-width:var(--max);margin:auto;padding:28px 24px 40px;color:#66758a;font:11px "Space Mono",monospace}.page-hero{padding-top:80px;padding-bottom:55px}.page-title{font-size:clamp(46px,7vw,78px)}.meta{font:12px "Space Mono",monospace;color:var(--accent);margin-bottom:18px;text-transform:uppercase;letter-spacing:.08em}.content{max-width:850px}.content section{padding:46px 0;border-top:1px solid var(--border)}.content h2{font-size:30px;margin-bottom:16px}.content p{color:var(--muted);font-size:17px;line-height:1.85}.arch{margin-top:22px;min-height:320px;border:1px dashed rgba(255,255,255,.2);border-radius:14px;background:var(--bg2);display:grid;place-items:center;color:var(--muted);font:12px "Space Mono",monospace;text-align:center;padding:24px}.list{display:grid;gap:10px;margin-top:18px}.list div{color:var(--muted);display:flex;gap:10px}.list div:before{content:"→";color:var(--accent)}.stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.stack span{padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font:11px "Space Mono",monospace}.back{display:inline-block;margin-bottom:26px;color:var(--accent);text-decoration:none;font-weight:700}pre.flow{white-space:pre-wrap;background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:22px;color:var(--muted);font:13px "Space Mono",monospace;line-height:1.8;margin-top:18px}@media(max-width:900px){.hero,.case-grid,.contact{grid-template-columns:1fr;display:grid}.panel{display:none}.grid4{grid-template-columns:1fr 1fr}}@media(max-width:620px){.links{display:none}.wrap{padding:66px 20px}.grid4{grid-template-columns:1fr}.contact{display:grid}}
+  </style>
+ </head>
+ <body>
+  <nav>
+   <div class="nav">
+    <a class="logo" href="index.html">
+     ojo
+     <span>
+      .data
+     </span>
+    </a>
+    <div class="links">
+     <a href="index.html#about">
+      About
+     </a>
+     <a href="index.html#case-studies">
+      Case Studies
+     </a>
+     <a href="index.html#skills">
+      Skills
+     </a>
+     <a href="index.html#contact">
+      Contact
+     </a>
+    </div>
+   </div>
+  </nav>
+  <main>
+   <section class="wrap hero">
+    <div>
+     <div class="badge">
+      Open to data engineering opportunities
+     </div>
+     <h1>
+      Ojo Odoh
+      <span>
+       Data Engineer.
+      </span>
+     </h1>
+     <p class="lead">
+      I design cloud data platforms, dimensional models, ETL/ELT pipelines, and trusted analytics layers using SQL, Python, Snowflake, Microsoft Fabric, PySpark, and Power BI.
+     </p>
+     <div class="actions">
+      <a class="btn primary" href="#case-studies">
+       View case studies →
+      </a>
+      <a class="btn secondary" href="https://github.com/lassjodoh" target="_blank">
+       GitHub
+      </a>
+      <a class="btn secondary" href="#" target="_blank">
+       Download CV
+      </a>
+     </div>
+    </div>
+    <div class="panel">
+     <div>
+      <span class="m">
+       {
+      </span>
+     </div>
+     <div>
+      <span class="k">
+       "name"
+      </span>
+      :
+      <span class="v">
+       "Ojo Odoh"
+      </span>
+      ,
+     </div>
+     <div>
+      <span class="k">
+       "role"
+      </span>
+      :
+      <span class="v">
+       "Data Engineer"
+      </span>
+      ,
+     </div>
+     <div>
+      <span class="k">
+       "location"
+      </span>
+      :
+      <span class="v">
+       "Canada"
+      </span>
+      ,
+     </div>
+     <div>
+      <span class="k">
+       "focus"
+      </span>
+      :
+      <span class="m">
+       [
+      </span>
+     </div>
+     <div>
+      <span class="v">
+       "Cloud Warehousing"
+      </span>
+      ,
+     </div>
+     <div>
+      <span class="v">
+       "Dimensional Modelling"
+      </span>
+      ,
+     </div>
+     <div>
+      <span class="v">
+       "ETL / ELT"
+      </span>
+      ,
+     </div>
+     <div>
+      <span class="v">
+       "Analytics Engineering"
+      </span>
+     </div>
+     <div>
+      <span class="m">
+       ]
+      </span>
+     </div>
+     <div>
+      <span class="m">
+       }
+      </span>
+     </div>
+    </div>
+   </section>
+   <section id="about">
+    <div class="wrap">
+     <div class="eyebrow">
+      About
+     </div>
+     <h2>
+      Engineering data for reliable decisions.
+     </h2>
+     <p class="intro">
+      I build practical data systems that move raw operational data into governed, business-ready datasets. My work combines strong SQL, dimensional modelling, cloud warehousing, automation, and analytics delivery.
+     </p>
+    </div>
+   </section>
+   <section id="case-studies">
+    <div class="wrap">
+     <div class="eyebrow">
+      Case Studies
+     </div>
+     <h2>
+      Selected data engineering work.
+     </h2>
+     <p class="intro">
+      Four end-to-end projects showing API ingestion, cloud warehousing, incremental processing, Microsoft Fabric, dimensional modelling, and analytics delivery.
+     </p>
+     <div class="case-grid">
+      <article class="case">
+       <div class="case-img">
+            <img
+            src="images/fraud.jpeg"
+            alt="Toronto Financial API">
+       </div>
+       <div class="case-body">
+        <div class="case-meta">
+         Case Study 01 · API Engineering
+        </div>
+        <h3>
+         Toronto Financial API Platform
+        </h3>
+        <p>
+         Automated financial API ingestion, validation, transformation, and analytics-ready reporting.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          Python
+         </span>
+         <span class="tag">
+          REST APIs
+         </span>
+         <span class="tag">
+          SQL
+         </span>
+         <span class="tag">
+          ETL
+         </span>
+        </div>
+        <a class="read" href="toronto-financial-api.html">
+         Read the full case study →
+        </a>
+       </div>
+      </article>
+      <article class="case">
+       <div class="case-img">
+            <img
+            src="images/crypto.jpeg"
+            alt="Saas analytics">
+       </div>
+       <div class="case-body">
+        <div class="case-meta">
+         Case Study 02 · SaaS Analytics
+        </div>
+        <h3>
+         CryptoNex SaaS Analytics Platform
+        </h3>
+        <p>
+         Snowflake medallion architecture for recurring revenue, subscription, and churn analytics.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          Snowflake
+         </span>
+         <span class="tag">
+          SQL
+         </span>
+         <span class="tag">
+          Python
+         </span>
+         <span class="tag">
+          Streamlit
+         </span>
+        </div>
+        <a class="read" href="cryptonex-saas.html">
+         Read the full case study →
+        </a>
+       </div>
+      </article>
+      <article class="case">
+       <div class="case-img">
+            <img
+            src="images/airline.jpeg"
+            alt="airline-operations">
+       </div>
+       <div class="case-body">
+        <div class="case-meta">
+         Case Study 03 · Incremental Warehousing
+        </div>
+        <h3>
+         Airline Operations Incremental Data Warehouse
+        </h3>
+        <p>
+         State-aware incremental warehouse processing with Python and DuckDB.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          Python
+         </span>
+         <span class="tag">
+          DuckDB
+         </span>
+         <span class="tag">
+          SQL
+         </span>
+         <span class="tag">
+          Git
+         </span>
+        </div>
+        <a class="read" href="airline-operations.html">
+         Read the full case study →
+        </a>
+       </div>
+      </article>
+      <article class="case">
+       <div class="case-img">
+            <img
+            src="images/retail.jpeg"
+            alt="omniretail-fabric">
+       </div>
+       <div class="case-body">
+        <div class="case-meta">
+         Case Study 04 · Microsoft Fabric
+        </div>
+        <h3>
+         OmniRetail Analytics Platform
+        </h3>
+        <p>
+         Omnichannel retail analytics on Microsoft Fabric using Lakehouse and medallion architecture.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          Microsoft Fabric
+         </span>
+         <span class="tag">
+          OneLake
+         </span>
+         <span class="tag">
+          Lakehouse
+         </span>
+         <span class="tag">
+          SQL
+         </span>
+        </div>
+        <a class="read" href="omniretail-fabric.html">
+         Read the full case study →
+        </a>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="skills">
+    <div class="wrap">
+     <div class="eyebrow">
+      Skills
+     </div>
+     <h2>
+      Technical toolkit.
+     </h2>
+     <div class="grid4">
+      <div class="skill">
+       <h3>
+        Languages
+       </h3>
+       <ul>
+        <li>
+         SQL
+        </li>
+        <li>
+         Python
+        </li>
+        <li>
+         PySpark
+        </li>
+        <li>
+         DAX
+        </li>
+       </ul>
+      </div>
+      <div class="skill">
+       <h3>
+        Cloud &amp; Platforms
+       </h3>
+       <ul>
+        <li>
+         Snowflake
+        </li>
+        <li>
+         Microsoft Fabric
+        </li>
+        <li>
+         Azure
+        </li>
+        <li>
+         Databricks
+        </li>
+       </ul>
+      </div>
+      <div class="skill">
+       <h3>
+        Engineering
+       </h3>
+       <ul>
+        <li>
+         ETL / ELT
+        </li>
+        <li>
+         Data Warehousing
+        </li>
+        <li>
+         Dimensional Modelling
+        </li>
+        <li>
+         Medallion Architecture
+        </li>
+       </ul>
+      </div>
+      <div class="skill">
+       <h3>
+        Delivery
+       </h3>
+       <ul>
+        <li>
+         Power BI
+        </li>
+        <li>
+         Streamlit
+        </li>
+        <li>
+         Git &amp; GitHub
+        </li>
+        <li>
+         CI / CD
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="contact">
+    <div class="wrap">
+     <div class="eyebrow">
+      Contact
+     </div>
+     <h2>
+      Let’s build reliable data systems.
+     </h2>
+     <div class="contact">
+      <div>
+       <h3>
+        Open to new opportunities.
+       </h3>
+       <p class="intro">
+        Data Engineer, Analytics Engineer, Senior BI Developer, and data platform roles.
+       </p>
+      </div>
+      <div class="actions">
+       <a class="btn primary" href="mailto:ojoh.odoh@gmail.com">
+        Email
+       </a>
+       <a class="btn secondary" href="https://github.com/lassjodoh" target="_blank">
+        GitHub
+       </a>
+       <a class="btn secondary" href="#" target="_blank">
+        LinkedIn
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   © 2026 Ojo Odoh · Data Engineering Portfolio
+  </footer>
+ </body>
+</html>
